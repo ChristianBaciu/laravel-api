@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // http://127.0.0.1:8000/api/apiProjects
 Route::get('/apiProjects', [ProjectController::class, 'index']);
 
+// http://127.0.0.1:8000/api/apiProjects/{titolo}
+//es.  http://127.0.0.1:8000/api/apiProjects/Dolorem necessitatibus voluptas et corrupti.
+Route::get('/apiProjects/{titolo}', [ProjectController::class, 'show']);
