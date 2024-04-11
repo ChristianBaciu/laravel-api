@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,8 @@ Route::get('/apiProjects', [ProjectController::class, 'index']);
 // http://127.0.0.1:8000/api/apiProjects/{titolo}
 //es.  http://127.0.0.1:8000/api/apiProjects/Dolorem necessitatibus voluptas et corrupti.
 Route::get('/apiProjects/{titolo}', [ProjectController::class, 'show']);
+
+
+// http://127.0.0.1:8000/api/contacts}
+Route::post('/contacts', [LeadController::class, 'store']);
+

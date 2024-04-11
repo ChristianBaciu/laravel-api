@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name', 100)->nullable();
-            $table->string('email', 250)->unique();
-            $table->text('message', 500)->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->text('message');
 
             $table->timestamps();
         });
